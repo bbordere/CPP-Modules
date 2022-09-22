@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 12:35:26 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/01 16:21:07 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/09/22 22:07:57 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static std::string cut_str(std::string str)
 
 void Contact::print_infos(void)
 {
-	std::cout << "|"  << std::setfill(' ') << std::setw(10) << this->_index;
+	std::cout << "|" << std::setw(10) << std::setfill(' ') << this->_index;
 	std::cout << "|" << std::setw(10) << std::setfill(' ') << cut_str(this->_first_name);
 	std::cout << "|" << std::setw(10) << std::setfill(' ') << cut_str(this->_last_name);
 	std::cout << "|" << std::setw(10) << std::setfill(' ') << cut_str(this->_nick_name) << '|' << std::endl;
