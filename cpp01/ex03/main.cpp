@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:24:05 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/02 16:01:19 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:51:25 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,16 @@ int main()
 		jim.attack();
 		club.setType("some other type of club");
 		jim.attack();
+	}
+	{
+		Weapon	*sword = new Weapon("Holy sword");
+		HumanB	bob("Bob");
+		bob.attack();
+		bob.setWeapon(*sword);
+		bob.attack();
+		sword->setType("Holy axe");
+		bob.attack();
+		delete sword;
 	}
 	return (0);
 }

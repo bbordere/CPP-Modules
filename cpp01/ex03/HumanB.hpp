@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 15:51:10 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/02 15:59:32 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:44:43 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ class HumanB
 		HumanB(std::string name);
 		~HumanB();
 
-		void	setWeapon(Weapon &weapon);
+		void	setWeapon(Weapon &zweapon);
 		void	attack(void) const;
 };

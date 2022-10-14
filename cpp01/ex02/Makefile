@@ -9,7 +9,7 @@ OBJS = $(FILES:.cpp=.o)
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
-NAME = zombie
+NAME = brain
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)

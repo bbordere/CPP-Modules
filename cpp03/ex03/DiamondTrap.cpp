@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:49:34 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 13:13:26 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/14 14:18:43 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,5 @@ std::string DiamondTrap::get_name(void) const
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "\e[0;35mHi ! I'am the DiamondTrap " << this->name << ", but my ClapTrap name is " << ClapTrap::name << "\e[0m" << std::endl;
+	std::cout << "Hi ! I'am the DiamondTrap " << this->name << ", but my ClapTrap name is " << ClapTrap::name << std::endl;
 }

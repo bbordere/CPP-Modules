@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:38:44 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/11 10:57:23 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/12 12:56:06 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,7 @@ Zombie *zombieHorde(int N, std::string name)
 	Zombie *horde; 
 
 	if (N <= 0)
-	{
-		horde = new Zombie[1];
-		horde[0].get_name() = name;
-		return (horde);
-	}
+		return (NULL);
 	horde = new Zombie[N];
 	for (int i = 0; i < N; i++)
 		horde[i].get_name() = name;

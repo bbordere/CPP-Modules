@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 14:16:11 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/11 10:58:58 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/13 14:34:36 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,37 @@ int main(void)
 	{
 		std::cout << "Creating Zombie horde" << std::endl;
 		Zombie *horde = zombieHorde(number, "Bob");
-		for (int i = 0; i < number; i++)
-			horde[i].announce();
-		delete []horde;
+		if (horde)
+		{
+			for (int i = 0; i < number; i++)
+				horde[i].announce();
+			delete []horde;
+		}
+		else
+			std::cout << "Can't create horde !" << std::endl;
 	}
 	{
 		std::cout << "Creating big horde " << std::endl;
-		number = 500;
+		number = 50;
 		Zombie *horde = zombieHorde(number, "Maurice");
-		for (int i = 0; i < number; i++)
-			horde[i].announce();
-		delete []horde;		
+		if (horde)
+		{
+			for (int i = 0; i < number; i++)
+				horde[i].announce();
+			delete []horde;
+		}
+		else
+			std::cout << "Can't create horde !" << std::endl;
 	}
+	{
+		std::cout << "Creating invalid horde " << std::endl;
+		number = -5;
+		Zombie *horde = zombieHorde(number, "Jules");
+		if (!horde)
+			std::cout << "Can't create horde !" << std::endl;
+		else
+			horde->announce();
 
+	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 13:01:22 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/14 14:17:57 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@
 int	main( void )
 {
 	DiamondTrap diamond("Maurice");
+	diamond.guardGate();
+	diamond.highFivesGuys();
 	diamond.whoAmI();
 }

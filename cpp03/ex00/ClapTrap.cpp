@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:44:52 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 10:52:20 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/14 13:36:27 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,9 @@ void ClapTrap::takeDamage(unsigned int amount)
 void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (!this->hit_pts)
-		std::cout << "ClapTrap " << this->name << " can't attacks with 0 hit points !" << std::endl;
+		std::cout << "ClapTrap " << this->name << " can't repair with 0 hit points !" << std::endl;
 	else if (!this->energy_pts)
-		std::cout << "ClapTrap " << this->name << " can't attacks with 0 energy points !" << std::endl;
+		std::cout << "ClapTrap " << this->name << " can't repair with 0 energy points !" << std::endl;
 	else
 	{
 		if (amount > 4294967295 - this->hit_pts)

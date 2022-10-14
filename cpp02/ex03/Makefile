@@ -9,7 +9,7 @@ OBJS = $(FILES:.cpp=.o)
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
-NAME = fixed
+NAME = bsp
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)

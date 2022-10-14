@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:08:29 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/12 18:12:07 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/14 14:01:45 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int main(int ac, char **av)
 	std::string		line;
 	std::ifstream	inFile;
 	std::ofstream	outFile;
-
 
 	if (search.empty())
 	{
