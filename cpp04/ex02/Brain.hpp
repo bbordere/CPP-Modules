@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:39:54 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 16:11:11 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:58:47 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Brain
 		Brain(Brain const &copy);
 		Brain &operator=(Brain const &assign);
 		~Brain();
-		std::string get_idea(int i) const;
-		void		set_idea(int i, std::string val);
+		std::string getIdea(int i) const;
+		void		setIdea(int i, std::string val);
 };
 
 #endif

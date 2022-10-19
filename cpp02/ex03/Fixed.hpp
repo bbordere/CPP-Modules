@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:20:56 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/04 15:35:10 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:17:13 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Fixed
 		Fixed(float const f);
 		
 		Fixed &operator=(Fixed const &assign);
+		Fixed const &operator=(Fixed const &assign) const;
 		
 		bool	operator>(Fixed const &comp) const;
 		bool	operator>=(Fixed const &comp) const;

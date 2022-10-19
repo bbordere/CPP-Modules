@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:16:17 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/04 17:28:56 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:38:26 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ class Point
 		Point(float x, float y);
 		Point(Point const &copy);
 		Point &operator=(Point const &asssign);
-		Fixed	get_x(void) const;
-		Fixed	get_y(void) const;
+		Fixed	getX(void) const;
+		Fixed	getY(void) const;
 		~Point();
 };
+
+std::ostream &operator<<(std::ostream &stream, Point const &point);
 
 bool bsp(Point const a, Point const b, Point const c, Point const p);
 

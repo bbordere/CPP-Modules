@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:43:32 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/04 20:55:45 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:19:39 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,13 @@ Fixed &Fixed::operator=(Fixed const &assign)
 		// std::cout << "Copy assignement called !" << std::endl;
 		this->raw_bits = assign.getRawBits();
 	}
+	return (*this);
+}
+
+Fixed const &Fixed::operator=(Fixed const &assign) const
+{
+	if (this != &assign)
+		(const_cast<Fixed *>(this))->raw_bits = assign.getRawBits();
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:32:14 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/14 13:25:40 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:30:41 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int		orient(Point const a, Point const b, Point const c)
 {
-	float	v1X = b.get_x().toFloat() - a.get_x().toFloat();
-	float	v1Y = b.get_y().toFloat() - a.get_y().toFloat();
-	float	v2X = c.get_x().toFloat() - a.get_x().toFloat();
-	float	v2Y = c.get_y().toFloat() - a.get_y().toFloat();
+	float	v1X = b.getX().toFloat() - a.getX().toFloat();
+	float	v1Y = b.getY().toFloat() - a.getY().toFloat();
+	float	v2X = c.getX().toFloat() - a.getX().toFloat();
+	float	v2Y = c.getY().toFloat() - a.getY().toFloat();
 	float	scal = v1X * v2Y - v1Y * v2X;
 	return (scal > 0 ? 1 : -1);
 }

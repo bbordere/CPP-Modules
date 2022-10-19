@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:16:21 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/04 17:27:15 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:41:25 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,33 @@ Point::Point(float x, float y): x(Fixed(x)), y(Fixed(y))
 {
 }
 
-Point::Point(Point const &copy): x(copy.get_x()), y(copy.get_y())
+Point::Point(Point const &copy): x(copy.getX()), y(copy.getY())
 {
+}
+
+Point &Point::operator=(Point const &asssign)
+{
+	this->x = asssign.getX();
+	this->y = asssign.getY();
+	return (*this);
 }
 
 Point::~Point(void)
 {
 }
 
-Fixed	Point::get_x(void) const
+Fixed	Point::getX(void) const
 {
 	return (this->x);
 }
 
-Fixed	Point::get_y(void) const
+Fixed	Point::getY(void) const
 {
 	return (this->y);
+}
+
+std::ostream &operator<<(std::ostream &stream, Point const &point)
+{
+	stream << "(" << point.getX().toFloat() << ", " << point.getY().toFloat() << ")";
+	return (stream);
 }

@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:53:28 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/11 14:01:36 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:53:58 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int main()
 		delete(cat);
 	}
 	{
+		std::cout << std::endl;
 		const WrongAnimal* w_meta = new WrongAnimal();
 		const WrongAnimal* w_cat = new WrongCat();
 		std::cout << w_cat->getType() << " " << std::endl;
