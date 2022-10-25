@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:41:01 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/14 11:50:15 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:00:41 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,25 @@ int main( void ) {
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
-	std::cout << (a > b) << ' ' << (a >= b) << ' ' << (a < b) << ' ' << (a <= b) << ' ' << (a == b) << ' ' << (a != b) << std::endl;
-	std::cout << (a + b) << ' ' << (a - b) << ' ' << (a * b) << ' ' << (a / b) << std::endl;
+	std::cout << std::endl;
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "a > b : " << ((a > b) ? "True\n" : "False\n");
+	std::cout << "a >= b : " << ((a >= b) ? "True\n" : "False\n");
+	std::cout << "a < b : " << ((a < b) ? "True\n" : "False\n");
+	std::cout << "a <= b : " << ((a <= b) ? "True\n" : "False\n");
+	std::cout << "a == b : " << ((a == b) ? "True\n" : "False\n");
+	std::cout << "a != b : " << ((a != b) ? "True\n" : "False\n");
+	std::cout << "a + b = " << (a + b) << std::endl;
+	std::cout << "a - b = " << (a - b) << std::endl;
+	std::cout << "a * b = " << (a * b) << std::endl;
+	std::cout << "a / b = " << (a / b) << std::endl;
 	Fixed const c = Fixed(42.42f);
 	std::cout << Fixed::min(a, c) << std::endl;
+	std::cout << std::endl;
+	std::cout << a << std::endl;
+	std::cout << --a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a-- << std::endl;
+	std::cout << a << std::endl;
 	return 0;
 }

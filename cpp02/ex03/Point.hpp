@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:16:17 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/19 14:38:26 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:43:38 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define __POINT_HPP__
 
 #include "Fixed.hpp"
-
 
 class Point
 {
