@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:44:57 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 10:44:00 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/06 23:25:46 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ class ClapTrap
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amout);
 
-		unsigned int	get_hit_pts(void) const;
-		unsigned int	get_energy_pts(void) const;
-		unsigned int	get_att_dmg(void) const;
-		std::string		get_name(void) const;
+		unsigned int	getHitPts(void) const;
+		unsigned int	getEnergyPts(void) const;
+		unsigned int	getAttDmg(void) const;
+		std::string		getName(void) const;
 };
 
 #endif 

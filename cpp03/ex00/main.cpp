@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/14 13:56:19 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/06 23:27:04 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,11 @@ int	main()
 		ClapTrap	Maurice("Maurice");
 		for (int i = 0; i < 11; i++)
 			Maurice.beRepaired(1);
-
 	}
 	{
 		std::cout << std::endl;
 		ClapTrap	Jack("Jack");
 		for (int i = 0; i < 11; i++)
 			Jack.attack("Bob");
-
 	}
 }

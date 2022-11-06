@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:49:34 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/14 14:18:43 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/06 23:25:45 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,38 +16,38 @@ DiamondTrap::DiamondTrap(): FragTrap(), ScavTrap()
 {
 	std::cout << "DiamondTrap Default Constructor" << std::endl;
 	this->name = "_clap_name";
-	this->hit_pts = FragTrap::get_hit_pts();
-	this->energy_pts = ScavTrap::get_energy_pts();
-	this->att_dmg = FragTrap::get_att_dmg();
+	this->hit_pts = FragTrap::getHitPts();
+	this->energy_pts = ScavTrap::getEnergyPts();
+	this->att_dmg = FragTrap::getAttDmg();
 }
 
 DiamondTrap::DiamondTrap(std::string name): FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
 {
 	std::cout << "DiamondTrap String Constructor" << std::endl;
 	this->name = name;
-	this->hit_pts = FragTrap::get_hit_pts();
-	this->energy_pts = ScavTrap::get_energy_pts();
-	this->att_dmg = FragTrap::get_att_dmg();
+	this->hit_pts = FragTrap::getHitPts();
+	this->energy_pts = ScavTrap::getEnergyPts();
+	this->att_dmg = FragTrap::getAttDmg();
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const &copy):
 	ClapTrap(),
-	FragTrap(copy.get_name().append("_clap_name")),
-	ScavTrap(copy.get_name().append("_clap_name"))
+	FragTrap(copy.getName().append("_clap_name")),
+	ScavTrap(copy.getName().append("_clap_name"))
 {
 	std::cout << "DiamondTrap Copy Constructor" << std::endl;
-	this->name = copy.get_name();
-	this->hit_pts = copy.get_hit_pts();
-	this->att_dmg = copy.get_att_dmg();
-	this->energy_pts = copy.get_energy_pts();
+	this->name = copy.getName();
+	this->hit_pts = copy.getHitPts();
+	this->att_dmg = copy.getAttDmg();
+	this->energy_pts = copy.getEnergyPts();
 }
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &assign)
 {
-	this->name = assign.get_name();
-	this->hit_pts = assign.get_hit_pts();
-	this->energy_pts = assign.get_energy_pts();
-	this->att_dmg = assign.get_att_dmg();
+	this->name = assign.getName();
+	this->hit_pts = assign.getHitPts();
+	this->energy_pts = assign.getEnergyPts();
+	this->att_dmg = assign.getAttDmg();
 	return (*this);
 }
 
@@ -56,7 +56,7 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "DiamondTrap Destroyed" << std::endl;
 }
 
-std::string DiamondTrap::get_name(void) const
+std::string DiamondTrap::getName(void) const
 {
 	return(this->name);
 }

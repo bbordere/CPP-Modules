@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:00:43 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 11:22:50 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/06 23:25:45 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ ScavTrap::ScavTrap(ScavTrap const &copy): ClapTrap(copy)
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &assign)
 {
-	this->name = assign.get_name();
-	this->hit_pts = assign.get_hit_pts();
-	this->energy_pts = assign.get_energy_pts();
-	this->att_dmg = assign.get_att_dmg();
+	this->name = assign.getName();
+	this->hit_pts = assign.getHitPts();
+	this->energy_pts = assign.getEnergyPts();
+	this->att_dmg = assign.getAttDmg();
 	return (*this);
 }
 

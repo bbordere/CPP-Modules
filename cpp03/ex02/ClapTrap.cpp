@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:44:52 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 10:52:20 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/06 23:25:45 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,18 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(ClapTrap const &copy)
 {
-	this->name = copy.get_name();
-	this->hit_pts = copy.get_hit_pts();
-	this->att_dmg = copy.get_att_dmg();
-	this->energy_pts = copy.get_energy_pts();
+	this->name = copy.getName();
+	this->hit_pts = copy.getHitPts();
+	this->att_dmg = copy.getAttDmg();
+	this->energy_pts = copy.getEnergyPts();
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &assign)
 {
-	this->name = assign.get_name();
-	this->hit_pts = assign.get_hit_pts();
-	this->energy_pts = assign.get_energy_pts();
-	this->att_dmg = assign.get_att_dmg();
+	this->name = assign.getName();
+	this->hit_pts = assign.getHitPts();
+	this->energy_pts = assign.getEnergyPts();
+	this->att_dmg = assign.getAttDmg();
 	return (*this);
 }
 
@@ -52,22 +52,22 @@ ClapTrap::~ClapTrap()
 	std::cout << "ClapTrap destroyed" << std::endl;
 }
 
-std::string		ClapTrap::get_name(void) const
+std::string		ClapTrap::getName(void) const
 {
 	return (this->name);
 }
 
-unsigned int	ClapTrap::get_att_dmg(void) const
+unsigned int	ClapTrap::getAttDmg(void) const
 {
 	return (this->att_dmg);
 }
 
-unsigned int	ClapTrap::get_hit_pts(void) const
+unsigned int	ClapTrap::getHitPts(void) const
 {
 	return (this->hit_pts);
 }
 
-unsigned int	ClapTrap::get_energy_pts(void) const
+unsigned int	ClapTrap::getEnergyPts(void) const
 {
 	return (this->energy_pts);
 }
