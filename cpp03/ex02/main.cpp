@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/14 14:14:59 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/10 22:09:21 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int	main( void )
 {
 	{
-		ScavTrap Bob("Bob");
+		FragTrap Bob("Bob");
 	}
 	{
 		std::cout << std::endl;

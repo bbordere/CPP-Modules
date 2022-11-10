@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:29:29 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/06 23:25:45 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/10 20:18:03 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ FragTrap::FragTrap(std::string name): ClapTrap(name)
 FragTrap::FragTrap(FragTrap const &copy): ClapTrap(copy)
 {
 	std::cout << "FragTrap Copy Constructor" << std::endl;
+	this->hit_pts = copy.getHitPts();
+	this->energy_pts = copy.getEnergyPts();
+	this->att_dmg = copy.getAttDmg();
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &assign)

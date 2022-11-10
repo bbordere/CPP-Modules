@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:44:52 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/06 23:25:45 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/10 20:12:14 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(ClapTrap const &copy)
 {
+	std::cout << "ClapTrap Copy Constructor" << std::endl;
 	this->name = copy.getName();
 	this->hit_pts = copy.getHitPts();
 	this->att_dmg = copy.getAttDmg();

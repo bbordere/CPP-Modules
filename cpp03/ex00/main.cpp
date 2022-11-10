@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/06 23:27:04 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/10 19:40:10 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main()
 		Bob.takeDamage(4294967295);
 
 		Bob.attack("Bob2");
+		Bob.beRepaired(3);
 	}
 	{
 		std::cout << std::endl;

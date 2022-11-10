@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:00:43 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/06 23:25:45 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/10 20:17:54 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 ScavTrap::ScavTrap(ScavTrap const &copy): ClapTrap(copy)
 {
 	std::cout << "ScavTrap Copy Constructor" << std::endl;
+	this->hit_pts = copy.getHitPts();
+	this->energy_pts = copy.getEnergyPts();
+	this->att_dmg = copy.getAttDmg();
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &assign)

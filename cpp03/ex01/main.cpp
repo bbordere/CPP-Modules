@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/06 23:40:47 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/10 22:01:37 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,16 @@ int	main()
 {
 	{
 		ScavTrap Bob("Bob");
+		Bob.attack("Jack");
 	}
 	{
 		std::cout << std::endl;
 		ScavTrap Maurice("Maurice");
 		Maurice.guardGate();
-		for (int i = 0; i < 11; i++)
+		for (int i = 0; i < 5; i++)
 			Maurice.attack("Bob");
 		Maurice.beRepaired(51);
+		Maurice.takeDamage(51);
 		Maurice.guardGate();
 	}
 }
