@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 12:43:32 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/19 14:19:39 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/08 13:20:40 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ Fixed	Fixed::operator/(Fixed const &fixed)
 	return (res);
 }
 
-Fixed	Fixed::operator++(void) //prefix
+Fixed	&Fixed::operator++(void) //prefix
 {
 	this->raw_bits++;
 	return (*this);
@@ -155,7 +155,7 @@ Fixed	Fixed::operator++(int) //postfix
 	return (res);
 }
 
-Fixed	Fixed::operator--(void) //prefix
+Fixed	&Fixed::operator--(void) //prefix
 {
 	this->raw_bits--;
 	return (*this);

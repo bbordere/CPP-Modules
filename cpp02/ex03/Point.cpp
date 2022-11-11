@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:16:21 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/19 14:41:25 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/08 13:55:59 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Point::Point(): x(Fixed(0)), y(Fixed(0))
 {
 }
 
-Point::Point(float x, float y): x(Fixed(x)), y(Fixed(y))
+Point::Point(float const x, float const y): x(Fixed(x)), y(Fixed(y))
 {
 }
 
