@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:00:43 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/10 20:17:47 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 11:46:24 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ ScavTrap::ScavTrap(ScavTrap const &copy): ClapTrap(copy)
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &assign)
 {
+	std::cout << "ScavTrap Assignment Operator" << std::endl;
 	this->name = assign.getName();
 	this->hit_pts = assign.getHitPts();
 	this->energy_pts = assign.getEnergyPts();

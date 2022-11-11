@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:53:28 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/19 14:58:47 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:59:23 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ int main()
 	{
 		std::cout << "---TEST COPY---" << std::endl;
 		Cat maurice = Cat();
-		maurice.get_brain()->setIdea(0, "Croquettes");
-		maurice.get_brain()->setIdea(1, "Souris");
+		maurice.getBrain()->setIdea(0, "Croquettes");
+		maurice.getBrain()->setIdea(1, "Souris");
 		Cat bob = Cat(maurice);
-		bob.get_brain()->setIdea(1, "Arbres");
-		std::cout << maurice.get_brain()->getIdea(1) << std::endl;
-		std::cout << bob.get_brain()->getIdea(1) << std::endl << std::endl;
-	}	
+		std::cout << std::endl;
+		bob.getBrain()->setIdea(1, "Arbres");
+		std::cout << maurice.getBrain()->getIdea(1) << std::endl;
+		std::cout << bob.getBrain()->getIdea(1) << std::endl << std::endl;
+	}
 	{
 		int const N = 10;
 		Animal *animals[N];

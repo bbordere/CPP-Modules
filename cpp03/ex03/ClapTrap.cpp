@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:44:52 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/10 20:12:17 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 15:41:20 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ClapTrap::ClapTrap(void)
 {
 	std::cout << "ClapTrap Default Constructor" << std::endl;
-	this->name = "";
+	this->name = "Default";
 	this->hit_pts = 10;
 	this->energy_pts = 10;
 	this->att_dmg = 0;
@@ -41,6 +41,7 @@ ClapTrap::ClapTrap(ClapTrap const &copy)
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &assign)
 {
+	std::cout << "ClapTrap Assignment Operator" << std::endl;
 	this->name = assign.getName();
 	this->hit_pts = assign.getHitPts();
 	this->energy_pts = assign.getEnergyPts();

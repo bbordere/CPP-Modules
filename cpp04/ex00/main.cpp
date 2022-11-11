@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:53:28 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/19 14:53:58 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:58:48 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,15 @@ int main()
 		const Animal* meta = new Animal();
 		const Animal* dog = new Dog();
 		const Animal* cat = new Cat();
+		std::cout << std::endl;
+		std::cout << meta->getType() << " " << std::endl;
 		std::cout << dog->getType() << " " << std::endl;
 		std::cout << cat->getType() << " " << std::endl;
+		std::cout << std::endl;
+		meta->makeSound();
 		dog->makeSound();
 		cat->makeSound();
-		meta->makeSound();
+		std::cout << std::endl;
 		delete(meta);
 		delete(dog);
 		delete(cat);

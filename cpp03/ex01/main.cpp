@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/10 22:01:37 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 14:41:13 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	main()
 			Maurice.attack("Bob");
 		Maurice.beRepaired(51);
 		Maurice.takeDamage(51);
-		Maurice.guardGate();
+		Maurice.takeDamage(455);
+		Maurice.attack("Jack");
+		Maurice.beRepaired(500);
 	}
 }

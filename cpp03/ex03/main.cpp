@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/10 22:10:20 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:16:34 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,19 @@
 
 int	main( void )
 {
-	DiamondTrap diamond("Maurice");
-	diamond.guardGate();
-	diamond.highFivesGuys();
-	diamond.whoAmI();
-	diamond.attack("Jack");
-	diamond.beRepaired(500);
-	diamond.takeDamage(45);
+	{
+		DiamondTrap	Bob;
+		Bob.whoAmI();
+	}
+	{
+		std::cout << std::endl;
+		DiamondTrap diamond("Maurice");
+		diamond.guardGate();
+		diamond.highFivesGuys();
+		diamond.whoAmI();
+		diamond.attack("Jack");
+		diamond.beRepaired(500);
+		diamond.takeDamage(850);
+		diamond.attack("Jack");
+	}
 }

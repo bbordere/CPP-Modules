@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/10 19:40:10 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 11:33:04 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,15 @@
 int	main()
 {
 	{
+		ClapTrap	Void = ClapTrap();
+	}
+	{
+		std::cout << std::endl;
+		ClapTrap	Bob("Bob");
+		ClapTrap	BobClone(Bob);
+	}
+	{
+		std::cout << std::endl;
 		ClapTrap	Bob("Bob");
 		Bob.attack("Alice");
 

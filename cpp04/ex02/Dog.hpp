@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:09:09 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 17:11:27 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:48:57 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Dog: public AAnimal
 		Dog &operator=(Dog const &assign);
 		~Dog();
 
-		Brain *get_brain(void) const;
+		Brain *getBrain(void) const;
 		void makeSound(void) const;
 };
 

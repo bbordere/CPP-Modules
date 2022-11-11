@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:56:05 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 17:11:21 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:48:57 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Cat: public AAnimal
 		~Cat();
 
 		void 	makeSound(void) const;
-		Brain	*get_brain(void) const;
+		Brain	*getBrain(void) const;
 };
 
 #endif

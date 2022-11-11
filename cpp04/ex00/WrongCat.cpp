@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:32:06 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 15:36:39 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:45:27 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ WrongCat &WrongCat::operator=(WrongCat const &assign)
 
 void WrongCat::makeSound(void) const
 {
-	std::cout << "*Loud wrong random sound*" << std::endl;
+	std::cout << "MEOOOOOOOOOOOOW" << std::endl;
 }
 
 WrongCat::~WrongCat()

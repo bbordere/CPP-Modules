@@ -6,22 +6,22 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:49:34 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/06 23:25:45 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:01:42 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(): FragTrap(), ScavTrap()
+DiamondTrap::DiamondTrap(): ClapTrap("Default_clap_name"), FragTrap("Default_clap_name"), ScavTrap("Default_clap_name")
 {
 	std::cout << "DiamondTrap Default Constructor" << std::endl;
-	this->name = "_clap_name";
+	this->name = "Default";
 	this->hit_pts = FragTrap::getHitPts();
 	this->energy_pts = ScavTrap::getEnergyPts();
 	this->att_dmg = FragTrap::getAttDmg();
 }
 
-DiamondTrap::DiamondTrap(std::string name): FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name") ,FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
 {
 	std::cout << "DiamondTrap String Constructor" << std::endl;
 	this->name = name;
@@ -31,7 +31,7 @@ DiamondTrap::DiamondTrap(std::string name): FragTrap(name + "_clap_name"), ScavT
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const &copy):
-	ClapTrap(),
+	ClapTrap(copy.getName().append("_clap_name")),
 	FragTrap(copy.getName().append("_clap_name")),
 	ScavTrap(copy.getName().append("_clap_name"))
 {
@@ -44,6 +44,7 @@ DiamondTrap::DiamondTrap(DiamondTrap const &copy):
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &assign)
 {
+	std::cout << "DiamondsTrap Assignment Operator" << std::endl;
 	this->name = assign.getName();
 	this->hit_pts = assign.getHitPts();
 	this->energy_pts = assign.getEnergyPts();
