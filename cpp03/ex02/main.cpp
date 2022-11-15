@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/11 14:43:47 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:46:54 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	main( void )
 		std::cout << std::endl;
 		FragTrap Maurice("Maurice");
 		Maurice.highFivesGuys();
-		Maurice.attack("Bob");
+		for (int i = 0; i < 5; i++)
+			Maurice.attack("Bob");
+		std::cout << std::endl;
+		Maurice.takeDamage(51);
 		Maurice.beRepaired(51);
 		Maurice.takeDamage(450);
 		Maurice.attack("Bob");

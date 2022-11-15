@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/11 14:41:13 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:40:48 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	main()
 		Maurice.guardGate();
 		for (int i = 0; i < 5; i++)
 			Maurice.attack("Bob");
+		std::cout << std::endl;
 		Maurice.beRepaired(51);
 		Maurice.takeDamage(51);
 		Maurice.takeDamage(455);

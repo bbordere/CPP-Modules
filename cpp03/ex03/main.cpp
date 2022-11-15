@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:50:04 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/11 16:16:34 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:54:36 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ int	main( void )
 	{
 		DiamondTrap	Bob;
 		Bob.whoAmI();
+	}
+	{
+		std::cout << std::endl;
+		DiamondTrap	Bob("Bob");
+		DiamondTrap	clone(Bob);
+		clone.whoAmI();
 	}
 	{
 		std::cout << std::endl;

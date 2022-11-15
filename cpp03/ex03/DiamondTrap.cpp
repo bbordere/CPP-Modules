@@ -6,13 +6,16 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 11:49:34 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/11 16:01:42 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/14 13:46:05 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(): ClapTrap("Default_clap_name"), FragTrap("Default_clap_name"), ScavTrap("Default_clap_name")
+DiamondTrap::DiamondTrap(): 
+	ClapTrap("Default_clap_name"),
+	FragTrap(),
+	ScavTrap()
 {
 	std::cout << "DiamondTrap Default Constructor" << std::endl;
 	this->name = "Default";
@@ -21,7 +24,10 @@ DiamondTrap::DiamondTrap(): ClapTrap("Default_clap_name"), FragTrap("Default_cla
 	this->att_dmg = FragTrap::getAttDmg();
 }
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name") ,FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name): 
+	ClapTrap(name + "_clap_name"),
+	FragTrap(),
+	ScavTrap()
 {
 	std::cout << "DiamondTrap String Constructor" << std::endl;
 	this->name = name;
@@ -32,14 +38,14 @@ DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name") ,FragT
 
 DiamondTrap::DiamondTrap(DiamondTrap const &copy):
 	ClapTrap(copy.getName().append("_clap_name")),
-	FragTrap(copy.getName().append("_clap_name")),
-	ScavTrap(copy.getName().append("_clap_name"))
+	FragTrap(),
+	ScavTrap()
 {
 	std::cout << "DiamondTrap Copy Constructor" << std::endl;
 	this->name = copy.getName();
 	this->hit_pts = copy.getHitPts();
-	this->att_dmg = copy.getAttDmg();
 	this->energy_pts = copy.getEnergyPts();
+	this->att_dmg = copy.getAttDmg();
 }
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &assign)
@@ -54,7 +60,7 @@ DiamondTrap &DiamondTrap::operator=(DiamondTrap const &assign)
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "DiamondTrap Destroyed" << std::endl;
+	std::cout << "DiamondTrap destroyed" << std::endl;
 }
 
 std::string DiamondTrap::getName(void) const
