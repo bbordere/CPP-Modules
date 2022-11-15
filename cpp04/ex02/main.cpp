@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:53:28 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/11 14:20:13 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:52:18 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,43 @@ int main()
 {
 	// AAnimal wrong = AAnimal();
 
-	AAnimal *maurice = new Cat();
-	maurice->makeSound();
-	delete maurice;
+{
+		Cat maurice = Cat();
+		maurice.getBrain()->setIdea(0, "Croquettes");
+		maurice.getBrain()->setIdea(1, "Souris");
+		Cat bob = Cat(maurice);
+		std::cout << std::endl;
+		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
+		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;
+		bob.getBrain()->setIdea(1, "Arbres");
+		std::cout << std::endl;
+		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
+		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;
+		std::cout << std::endl;
+		bob.getBrain()->setIdea(0, "Oiseaux");
+		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
+		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;
+		std::cout << std::endl;
+	}
+	{
+		std::cout << std::endl;
+		int const N = 10;
+		AAnimal *animals[N];
+		for (size_t i = 0; i < N; i++)
+		{
+			if (i < N / 2)
+				animals[i] = new Cat();
+			else
+				animals[i] = new Dog();
+			std::cout << std::endl;	
+		}
+		for (size_t i = 0; i < N; i++)
+		{
+			std::cout << "Animal at index " << i << " is a " << animals[i]->getType() << std::endl;
+			delete animals[i];
+			std::cout << std::endl;
+		}
+	}
 	return 0;
 }
 

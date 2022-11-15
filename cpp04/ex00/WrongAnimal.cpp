@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:27:17 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 15:28:40 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/15 11:19:12 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ WrongAnimal::WrongAnimal(WrongAnimal const &copy)
 
 WrongAnimal &WrongAnimal::operator=(WrongAnimal const &assign)
 {
+	std::cout << "WrongAnimal Assignment Operator" << std::endl;
 	this->type = assign.getType();
 	return (*this);
 }

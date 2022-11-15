@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:56:02 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 15:17:55 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/15 10:43:38 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Cat::Cat(Cat const &copy): Animal(copy)
 
 Cat &Cat::operator=(Cat const &assign)
 {
+	std::cout << "Cat Assignment Operator" << std::endl;
 	this->type = assign.getType();
 	return (*this);
 }

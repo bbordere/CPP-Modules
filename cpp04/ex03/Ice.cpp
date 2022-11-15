@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 14:55:48 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 10:43:45 by bbordere         ###   ########.fr       */
+/*   Created: 2022/11/15 15:14:46 by bbordere          #+#    #+#             */
+/*   Updated: 2022/11/15 15:15:00 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Ice.hpp"
 
-Dog::Dog()
+Ice::Ice()
 {
-	std::cout << "Dog Default Constructor" << std::endl;
-	this->type = "Dog";
+	this->type = "ice";
 }
 
-Dog::Dog(Dog const &copy): Animal(copy)
+Ice::Ice(Ice const &copy): AMateria("ice")
 {
-	std::cout << "Dog Copy Constructor" << std::endl;
 	this->type = copy.getType();
 }
 
-Dog &Dog::operator=(Dog const &assign)
+Ice::~Ice()
 {
-	std::cout << "Dog Assignment Operator" << std::endl;
+}
+
+Ice &Ice::operator=(Ice const &assign)
+{
 	this->type = assign.getType();
 	return (*this);
 }
 
-Dog::~Dog()
+AMateria* Ice::clone() const
 {
-	std::cout << "Dog dead" << std::endl;
+	return (new Ice(*this));
 }
 
-void Dog::makeSound(void) const
+void Ice::use(ICharacter &target)
 {
-	std::cout << "Wouaf" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

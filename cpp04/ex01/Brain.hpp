@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:39:54 by bbordere          #+#    #+#             */
-/*   Updated: 2022/10/19 15:45:35 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/15 12:05:54 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ class Brain
 		std::string getIdea(int i) const;
 		void		setIdea(int i, std::string val);
 };
+std::ostream &operator<<(std::ostream &stream, Brain *brain);
 
 #endif

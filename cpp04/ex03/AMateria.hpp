@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:24:51 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/11 16:28:48 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/15 15:11:31 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,41 +33,5 @@ class AMateria
 		virtual	AMateria	*clone(void) const = 0;
 		virtual void		use(ICharacter &target);
 };
-
-AMateria::AMateria()
-{
-	this->type = "Default type";
-}
-
-AMateria::AMateria(std::string const &type)
-{
-	this->type = type;
-}
-
-AMateria	&AMateria::operator=(const AMateria & copy)
-{
-	this->type = copy.getType();
-	return (*this);
-}
-
-std::string const &AMateria::getType(void) const
-{
-	return (this->type);
-}
-
-AMateria::AMateria(AMateria const &copy)
-{
-	this->type = copy.getType();
-}
-
-void	AMateria::use(ICharacter &target)
-{
-	(void)target;
-}
-
-AMateria::~AMateria()
-{
-}
-
 
 #endif

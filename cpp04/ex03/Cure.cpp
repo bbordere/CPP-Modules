@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 14:55:48 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 10:43:45 by bbordere         ###   ########.fr       */
+/*   Created: 2022/11/15 15:14:18 by bbordere          #+#    #+#             */
+/*   Updated: 2022/11/15 15:14:36 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cure.hpp"
 
-Dog::Dog()
+Cure::Cure()
 {
-	std::cout << "Dog Default Constructor" << std::endl;
-	this->type = "Dog";
+	this->type = "cure";
 }
 
-Dog::Dog(Dog const &copy): Animal(copy)
+Cure::Cure(Cure const &copy): AMateria("cure")
 {
-	std::cout << "Dog Copy Constructor" << std::endl;
 	this->type = copy.getType();
 }
 
-Dog &Dog::operator=(Dog const &assign)
+Cure::~Cure()
 {
-	std::cout << "Dog Assignment Operator" << std::endl;
+}
+
+Cure & Cure::operator=(Cure const &assign)
+{
 	this->type = assign.getType();
 	return (*this);
 }
 
-Dog::~Dog()
+AMateria* Cure::clone() const
 {
-	std::cout << "Dog dead" << std::endl;
+	return (new Cure(*this));
 }
 
-void Dog::makeSound(void) const
+void Cure::use(ICharacter &target)
 {
-	std::cout << "Wouaf" << std::endl;
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

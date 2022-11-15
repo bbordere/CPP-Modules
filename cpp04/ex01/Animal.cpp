@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:54:41 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 16:07:56 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/15 11:18:25 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Animal::Animal(Animal const &copy)
 
 Animal &Animal::operator=(Animal const &assign)
 {
+	std::cout << "Animal Assignment Operator" << std::endl;
 	this->type = assign.getType();
 	return (*this);
 }
