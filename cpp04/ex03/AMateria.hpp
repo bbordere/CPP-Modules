@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:24:51 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 15:11:31 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:13:57 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ class AMateria
 		virtual	AMateria	*clone(void) const = 0;
 		virtual void		use(ICharacter &target);
 };
+
+std::ostream &operator<<(std::ostream &stream, AMateria const *mat);
 
 #endif

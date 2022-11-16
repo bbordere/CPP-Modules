@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:05:36 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 15:10:16 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:42:13 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,11 @@ class MateriaSource:public IMateriaSource
         ~MateriaSource(void);
 
 		size_t				getInventorySize(void) const;
-        void        learnMateria(AMateria *mat);
-        AMateria    *createMateria(std::string const &type);
+        void				learnMateria(AMateria *mat);
+        AMateria			*createMateria(std::string const &type);
+		void				printInventory(std::ostream &stream) const;
 };
+
+std::ostream &operator<<(std::ostream &stream, MateriaSource const *mat);
 
 #endif

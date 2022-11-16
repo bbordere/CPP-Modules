@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:09:41 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 15:10:19 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:58:04 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,23 @@ AMateria *MateriaSource::createMateria(const std::string &type)
 		if(this->inventory[i]->getType() == type)
 			return (this->inventory[i]->clone());
     return (NULL);
+}
+
+void				MateriaSource::printInventory(std::ostream &stream) const
+{
+	stream << "{";
+	if (this->inventorySize > 0)
+	{
+		for (size_t i = 0; i < this->inventorySize - 1; i++)
+			stream << this->inventory[i] << ", ";
+		stream << this->inventory[this->inventorySize - 1] << '}';
+	}
+	else
+		stream << '}';
+}
+
+std::ostream &operator<<(std::ostream &stream, MateriaSource const *mat)
+{
+	mat->printInventory(stream);
+	return (stream);
 }

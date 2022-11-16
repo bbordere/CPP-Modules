@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:11:48 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 15:11:55 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/16 13:48:44 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,11 @@ void	AMateria::use(ICharacter &target)
 
 AMateria::~AMateria()
 {
+}
+
+std::ostream &operator<<(std::ostream &stream, AMateria const *mat)
+{
+	std::string	type = mat->getType();
+	stream << type << ' ' << (type.compare("ice") == 0 ? "⛄" : "🚑");
+	return (stream);
 }
