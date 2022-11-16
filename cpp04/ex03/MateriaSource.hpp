@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:05:36 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/16 13:42:13 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/16 21:22:23 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class MateriaSource:public IMateriaSource
         void				learnMateria(AMateria *mat);
         AMateria			*createMateria(std::string const &type);
 		void				printInventory(std::ostream &stream) const;
+		void				deleteInventory(void);
 };
 
 std::ostream &operator<<(std::ostream &stream, MateriaSource const *mat);

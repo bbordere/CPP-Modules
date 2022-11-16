@@ -1,6 +1,6 @@
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -g3 #-Wall -Wextra -Werror -std=c++98
 
 FILES = main.cpp Character.cpp MateriaSource.cpp AMateria.cpp Ice.cpp Cure.cpp
 

@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:09:41 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/16 13:58:04 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/16 21:50:55 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,23 @@ MateriaSource::MateriaSource(const MateriaSource &copy)
 
 MateriaSource::~MateriaSource(void)
 {
+	this->deleteInventory();
+}
+
+void	MateriaSource::deleteInventory(void)
+{
 	for(size_t i = 0; i < this->inventorySize; i++)
-		delete(this->inventory[i]);
+	{
+		if (this->inventory[i] != NULL)
+		{
+			delete (this->inventory[i]);
+			for (size_t j = i + 1; j < this->inventorySize; j++)
+			{
+				if (this->inventory[i] == this->inventory[j])
+					this->inventory[j] = NULL;
+			}
+		}
+	}
 }
 
 size_t MateriaSource::getInventorySize(void) const
@@ -41,8 +56,7 @@ size_t MateriaSource::getInventorySize(void) const
 
 MateriaSource &MateriaSource::operator= (const MateriaSource &assign)
 {
-	for (size_t i = 0; i < this->inventorySize ; i++)
-		delete(this->inventory[i]);
+	this->deleteInventory();
 	this->inventorySize = assign.getInventorySize();
 	for (size_t i = 0; i < 4; i++)
 		this->inventory[i] = NULL;
@@ -61,10 +75,10 @@ void MateriaSource::learnMateria(AMateria *mat)
 
 AMateria *MateriaSource::createMateria(const std::string &type)
 {
-    for(size_t i = 0; i < this->inventorySize; i++)
-		if(this->inventory[i]->getType() == type)
+	for(size_t i = 0; i < this->inventorySize; i++)
+		if(this->inventory[i] && this->inventory[i]->getType() == type)
 			return (this->inventory[i]->clone());
-    return (NULL);
+	return (NULL);
 }
 
 void				MateriaSource::printInventory(std::ostream &stream) const
