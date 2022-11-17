@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:39:54 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 12:05:54 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:43:56 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Brain
 {
 	private:
 		std::string ideas[100];
+
 	public:
 		Brain();
 		Brain(Brain const &copy);

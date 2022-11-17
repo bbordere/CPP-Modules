@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:06:20 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/16 21:51:06 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 20:05:11 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ std::string	const &Character::getName(void) const
 	return (this->name);
 }
 
-Character::Character(Character const &copy)
+Character::Character(Character const &copy): inventorySize(0)
 {
 	this->deleteInventory();
 	this->inventorySize = copy.getInventorySize();

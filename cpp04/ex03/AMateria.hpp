@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 14:24:51 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/16 13:13:57 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 20:01:29 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class AMateria
 {
 	protected:
 		std::string	type;
+
 	public:
 		AMateria();
 		AMateria(std::string const &type);

@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:55:48 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/17 16:07:03 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:40:08 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Dog &Dog::operator=(Dog const &assign)
 
 Dog::~Dog()
 {
-	delete(brain);
+	delete(this->brain);
 	std::cout << "Dog dead" << std::endl;
 }
 

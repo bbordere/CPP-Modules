@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:56:02 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/17 16:07:08 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:39:25 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ Cat::~Cat()
 	std::cout << "Cat dead" << std::endl;
 }
 
-void Cat::makeSound(void) const
-{
-	std::cout << "Meow" << std::endl;
-}
-
 Brain *Cat::getBrain(void) const
 {
 	return (this->brain);
+}
+
+void Cat::makeSound(void) const
+{
+	std::cout << "Meow" << std::endl;
 }

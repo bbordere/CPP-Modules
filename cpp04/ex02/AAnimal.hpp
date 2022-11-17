@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:46:11 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 17:11:08 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:58:15 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ class AAnimal
 	public:
 		AAnimal();
 		AAnimal(AAnimal const &copy);
-		virtual AAnimal &operator=(AAnimal const &assign);
-		virtual ~AAnimal() = 0;
+		AAnimal &operator=(AAnimal const &assign);
+		virtual ~AAnimal();
 
 		std::string getType(void) const;
-		virtual void makeSound(void) const;
+		virtual void makeSound(void) const = 0;
 };
 
 #endif

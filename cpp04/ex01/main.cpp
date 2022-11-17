@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:53:28 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/17 16:22:21 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:37:19 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int main()
 			std::cout << "Animal at index " << i << " is a " << animals[i]->getType() << std::endl;
 		std::cout << std::endl;
 		for (size_t i = 0; i < N; i++)
-			delete animals[i];
+			delete animals[i];	
 	}
 	return 0;	
 }

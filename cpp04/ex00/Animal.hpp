@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:46:11 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/05 15:17:03 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:14:56 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Animal
 {
 	protected:
 		std::string type;
+
 	public:
 		Animal();
 		Animal(Animal const &copy);

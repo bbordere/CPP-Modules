@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:05:36 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/16 21:22:23 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 20:00:10 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "IMateriaSource.hpp"
 
-class MateriaSource:public IMateriaSource
+class MateriaSource: public IMateriaSource
 {
 	private:
 		AMateria		*inventory[4];

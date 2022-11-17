@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:16:25 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/16 21:40:04 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 20:11:42 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,17 @@ int main()
 		MateriaSource	*src = new MateriaSource();
 		std::cout << "src Inventory: " << src << std::endl;
 		AMateria		*ice = new Ice();
+
 		src->learnMateria(ice);
 		src->learnMateria(ice);
 		src->learnMateria(new Cure());
 		src->learnMateria(new Ice());
+
 		std::cout << "src Inventory: " << src << std::endl;
 		IMateriaSource	*src2 = new MateriaSource(*src);
 		std::cout << "src2 Inventory: " << static_cast<MateriaSource *>(src) << std::endl;
 		std::cout << std::endl;
+
 		AMateria	*mat;
 		mat = src->createMateria("cure");
 		Bob->equip(mat);
@@ -60,35 +63,41 @@ int main()
 		Bob->equip(mat);
 		mat = src->createMateria("cure");
 		Bob->equip(mat);
-		std::cout << "bob's Inventory: " << Bob << std::endl;
+		std::cout << "Bob's Inventory: " << Bob << std::endl;
+	
 		Bob->unequip(2);
 		delete mat;
-		std::cout << "bob's Inventory: " << Bob << std::endl;
+
+		std::cout << "Bob's Inventory: " << Bob << std::endl;
 		Bob->equip(NULL);
-		std::cout << "bob's Inventory: " << Bob << std::endl;
+		std::cout << "Bob's Inventory: " << Bob << std::endl;
 		mat = src->createMateria("damage");
 		Bob->equip(mat);
-		std::cout << "bob's Inventory: " << Bob << std::endl;
+		std::cout << "Bob's Inventory: " << Bob << std::endl;
+
 		Bob->unequip(-1);
-		std::cout << "bob's Inventory: " << Bob << std::endl;
-		Bob->unequip(2147483648);
-		std::cout << "bob's Inventory: " << Bob << std::endl;
+		std::cout << "Bob's Inventory: " << Bob << std::endl;
 		Bob->unequip(4);
-		std::cout << "bob's Inventory: " << Bob << std::endl;
+		std::cout << "Bob's Inventory: " << Bob << std::endl;
+
+		std::cout << std::endl;
 		Maurice->equip(src->createMateria("ice"));
 		Bob->use(0, *Maurice);
 		Bob->use(1, *Maurice);
 		Maurice->use(0, *Bob);
 		Maurice->use(1, *Bob);
 
-
-
-
-
+		std::cout << std::endl;
+		Character	*Jack = new Character(*Bob);
+		std::cout << "Bob's Inventory: " << Bob << std::endl;
+		std::cout << "Jack's Inventory: " << Bob << std::endl;
+	
+		std::cout << std::endl;
 		delete Bob;
 		delete Maurice;
 		delete src;
 		delete src2;
+		delete Jack;
 
 	}
 	return 0;
