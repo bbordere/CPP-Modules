@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:55:48 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/11 16:48:57 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 16:32:06 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ Dog::Dog(Dog const &copy): AAnimal(copy)
 
 Dog &Dog::operator=(Dog const &assign)
 {
+	std::cout << "Dog Assignment Operator" << std::endl;
+	if (this->brain)
+		delete this->brain;
 	this->type = assign.getType();
 	this->brain = new Brain(*(assign.getBrain()));
 	return (*this);

@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:56:35 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 12:11:44 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 16:20:44 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Brain::Brain()
 {
-	std::cout << "Default Brain Constructor" << std::endl;
+	std::cout << "Brain Default Constructor" << std::endl;
 }
 
 void	Brain::setIdea(int i, std::string val)
@@ -32,7 +32,7 @@ std::string Brain::getIdea(int i) const
 
 Brain::Brain(Brain const &copy)
 {
-	std::cout << "Copy Brain Constructor" << std::endl;
+	std::cout << "Brain Copy Constructor" << std::endl;
 	for (int i = 0; i < 100; i++)
 		this->setIdea(i, copy.getIdea(i));	
 }

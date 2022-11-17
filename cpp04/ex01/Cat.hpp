@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:56:05 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/11 16:48:57 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 15:46:55 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cat: public Animal
 		Cat();
 		Cat(Cat const &copy);
 		Cat &operator=(Cat const &assign);
-		~Cat();
+		virtual ~Cat();
 
 		void 	makeSound(void) const;
 		Brain	*getBrain(void) const;

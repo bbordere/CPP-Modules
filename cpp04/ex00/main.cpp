@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:53:28 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/15 11:13:24 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 16:28:13 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,14 @@ int main()
 		delete(dog);
 		std::cout << std::endl;
 		delete(cat);
+	}
+	{
+		std::cout << std::endl;
+		WrongCat *w_cat = new WrongCat();
+		std::cout << std::endl;
+		w_cat->makeSound();
+		std::cout << std::endl;
+		delete (w_cat);
 	}
 	{
 		std::cout << std::endl;

@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:09:09 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/11 16:48:57 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/17 10:46:51 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Dog: public Animal
 		Dog();
 		Dog(Dog const &copy);
 		Dog &operator=(Dog const &assign);
-		~Dog();
+		virtual ~Dog();
 
 		Brain *getBrain(void) const;
 		void makeSound(void) const;
