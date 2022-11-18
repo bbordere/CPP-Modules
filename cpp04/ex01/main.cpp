@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 14:53:28 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/17 19:37:19 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/18 11:01:59 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,16 @@ int main()
 		maurice.getBrain()->setIdea(1, "Souris");
 		Cat bob = Cat(maurice);
 		std::cout << std::endl;
+
 		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
 		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;
 		bob.getBrain()->setIdea(1, "Arbres");
 		std::cout << std::endl;
+
 		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
 		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;
 		std::cout << std::endl;
+
 		bob.getBrain()->setIdea(0, "Oiseaux");
 		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
 		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;
@@ -45,13 +48,16 @@ int main()
 		Cat bob;
 		bob = maurice;
 		std::cout << std::endl;
+
 		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
 		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;
 		bob.getBrain()->setIdea(1, "Arbres");
 		std::cout << std::endl;
+
 		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
 		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;
 		std::cout << std::endl;
+
 		bob.getBrain()->setIdea(0, "Oiseaux");
 		std::cout << "Maurice's Brain: " << maurice.getBrain() << std::endl;
 		std::cout << "Bob's Brain: " << bob.getBrain() << std::endl;

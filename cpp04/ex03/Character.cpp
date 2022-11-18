@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:06:20 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/17 20:05:11 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/18 11:03:46 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	Character::equip(AMateria *mat)
 
 void	Character::unequip(int i)
 {
-	if (i < 0 || i >= this->inventorySize)
+	if (i < 0 || static_cast<size_t>(i) >= this->inventorySize)
 		return ;
 	for (size_t j = static_cast<size_t>(i + 1); j < this->inventorySize ; j++)
 		this->inventory[j - 1] = this->inventory[j];
