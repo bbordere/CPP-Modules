@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:39:55 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/06 14:18:22 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/19 12:51:33 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ Form::Form(Form const &copy): name(copy.getName()), signGrade(copy.getSignGrade(
 	this->isSigned = copy.getSignStatus();
 }
 
-Form::Form(std::string const name, int const signGrade, int const execGrade): name(name), signGrade(signGrade), execGrade(execGrade)
+Form::Form(std::string const name, int const signGrade, int const execGrade): 
+	name(name), signGrade(signGrade), execGrade(execGrade)
 {
 	if(execGrade < 1 || signGrade < 1)
 		throw Form::GradeTooHighException();

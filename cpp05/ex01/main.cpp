@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:15:26 by bbordere          #+#    #+#             */
-/*   Updated: 2022/08/07 23:31:23 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/20 19:32:24 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 int main(void)
 {
-	std::cout << std::setw(80) << std::setfill('-') << '\n';
+	std::cout << std::setw(20) << std::setfill('-') << '\n';
 	{
 		Form form("Form", 50, 150);
 		std::cout << form << std::endl;
 	}
-	std::cout << std::setw(80) << std::setfill('-') << '\n';
+	std::cout << std::setw(20) << std::setfill('-') << '\n';
 	{
 		try
 		{
@@ -33,6 +33,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+		std::cout << std::endl;
+
 		try
 		{
 			Form form = Form("Form", 0, 42);
@@ -42,6 +44,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+		
+		std::cout << std::endl;
 		try
 		{
 			Form form = Form("Form", 151, 42);
@@ -51,7 +55,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
-		std::cout << std::setw(80) << std::setfill('-') << '\n';
+		
+		std::cout << std::setw(20) << std::setfill('-') << '\n';
 		try
 		{
 			Form form = Form("Form", 21, 42);
@@ -65,6 +70,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+		
+		std::cout << std::endl;
 		try
 		{
 			Form form = Form("Form", 1, 1);
@@ -78,7 +85,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
-		std::cout << std::setw(80) << std::setfill('-') << '\n';
+		
+		std::cout << std::setw(20) << std::setfill('-') << '\n';
 		{
 			Form form = Form("Form", 1, 1);
 			Bureaucrat	maurice = Bureaucrat("Maurice", 2);
@@ -93,7 +101,10 @@ int main(void)
 			{
 				std::cout << e.what() << std::endl;
 			}
+			std::cout << std::endl;
 			maurice.increaseGrade();
+			std::cout << "Maurice increased !" << std::endl;
+			std::cout << maurice << std::endl;
 			try
 			{
 				maurice.signForm(form);
@@ -105,5 +116,5 @@ int main(void)
 			}
 		}
 	}
-	std::cout << std::setw(80) << std::setfill('-') << '\n';
+	std::cout << std::setw(20) << std::setfill('-') << '\n';
 }

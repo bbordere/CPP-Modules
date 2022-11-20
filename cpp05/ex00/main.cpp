@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:15:26 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/06 11:37:39 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/19 12:33:49 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main(void)
 {
-	std::cout << std::setw(80) << std::setfill('-') << '\n';
+	std::cout << std::setw(20) << std::setfill('-') << '\n';
 	{
 		Bureaucrat maurice("Maurice", 3);
 		std::cout << maurice << std::endl;
@@ -25,7 +25,7 @@ int main(void)
 		maurice.decreaseGrade();
 		std::cout << maurice << std::endl;
 	}
-	std::cout << std::setw(80) << std::setfill('-') << '\n';
+	std::cout << std::setw(20) << std::setfill('-') << '\n';
 	{
 		try
 		{
@@ -36,6 +36,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+		
+		std::cout << std::endl;
 		try
 		{
 			Bureaucrat bob("Bob", 151);
@@ -45,6 +47,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+		
+		std::cout << std::endl;
 		try
 		{
 			Bureaucrat bob("Bob", 0);
@@ -54,6 +58,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+		std::cout << std::endl;
+		
 		try
 		{
 			Bureaucrat bob("Bob", 150);
@@ -65,6 +71,8 @@ int main(void)
 		{
 			std::cout << e.what() << std::endl;
 		}
+		std::cout << std::endl;
+
 		try
 		{
 			Bureaucrat bob("Bob", 1);
@@ -75,7 +83,20 @@ int main(void)
 		catch(const std::exception  &e)
 		{
 			std::cout << e.what() << std::endl;
+		}
+		std::cout << std::endl;
+
+		try
+		{
+			Bureaucrat bob("Bob", 150);
+			std::cout << bob << std::endl;
+			bob.decreaseGrade();
+			std::cout << bob << std::endl;
+		}
+		catch(const std::exception  &e)
+		{
+			std::cout << e.what() << std::endl;
 		}	
 	}
-	std::cout << std::setw(80) << std::setfill('-') << '\n';
+	std::cout << std::setw(20) << std::setfill('-') << '\n';
 }

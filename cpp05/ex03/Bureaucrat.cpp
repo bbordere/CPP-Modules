@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:04:49 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/06 15:52:31 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/20 15:02:13 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char const *Bureaucrat::GradeTooLowException::what() const throw()
 
 void	Bureaucrat::increaseGrade(void)
 {
-	if (this->grade == 1)
+	if (this->grade <= 1)
 		throw Bureaucrat::GradeTooHighException();
 	else
 		this->grade--;
@@ -74,7 +74,7 @@ void	Bureaucrat::increaseGrade(void)
 
 void	Bureaucrat::decreaseGrade(void)
 {
-	if (this->grade == 150)
+	if (this->grade >= 150)
 		throw Bureaucrat::GradeTooLowException();
 	else
 		this->grade++;

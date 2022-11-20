@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:38:20 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/06 15:50:27 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/20 19:43:58 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Form
 		Form(std::string const name, int const signGrade, int const execGrade);
 		Form &operator=(Form const &assign);
 		virtual ~Form();
-		virtual	void execute(Bureaucrat const &executor) const;
+		void execute(Bureaucrat const &executor) const;
 		virtual	void doExecution(void) const = 0;
 		
 		std::string const	getName(void)	const;
