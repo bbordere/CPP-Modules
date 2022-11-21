@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:04:49 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/20 15:02:13 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/21 14:08:43 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ Bureaucrat::Bureaucrat(std::string const name, int grade): name(name)
 		throw Bureaucrat::GradeTooHighException();
 	else
 		this->grade = grade;
-	
 }
 
-std::string Bureaucrat::getName(void) const
+std::string const Bureaucrat::getName(void) const
 {
 	return (this->name);
 }

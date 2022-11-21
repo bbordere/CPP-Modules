@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 10:36:53 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/06 11:27:07 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/21 14:06:29 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Bureaucrat
 		Bureaucrat &operator=(Bureaucrat const &assign);
 		~Bureaucrat();
 
-		std::string	getName(void) const;
+		std::string const	getName(void) const;
 		int			getGrade(void) const;
 		void		increaseGrade(void);
 		void		decreaseGrade(void);

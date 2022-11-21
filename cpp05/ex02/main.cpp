@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:15:26 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/20 19:48:39 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/21 14:17:39 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 int	main()
 {
 	{
+		// Form test = Form();
 		std::cout << std::setw(20) << std::setfill('-') << '\n';
 		PresidentialPardonForm form = PresidentialPardonForm("Form");
 		Bureaucrat bob = Bureaucrat("bob", 20);
