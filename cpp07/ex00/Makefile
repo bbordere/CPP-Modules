@@ -11,10 +11,10 @@ OBJS = $(FILES:.cpp=.o)
 
 NAME = whatever
 
+all: $(NAME)
+
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-
-all: $(NAME)
 
 clean:
 	rm -f $(OBJS)

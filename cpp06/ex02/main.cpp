@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 17:13:38 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/07 17:34:47 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/27 15:44:01 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,11 @@ Base	*generate(void)
 
 void	identify(Base *p)
 {
-	A *a = dynamic_cast<A*>(p);
-	if(a)
+	if(dynamic_cast<A*>(p))
 		std::cout << "Real type of pointer is: A" << std::endl;
-	B *b = dynamic_cast<B*>(p);
-	if(b)
+	else if(dynamic_cast<B*>(p))
 		std::cout << "Real type of pointer is: B" << std::endl;
-	C *c = dynamic_cast<C*>(p);
-	if(c)
+	else if(dynamic_cast<C*>(p))
 		std::cout << "Real type of pointer is: C" << std::endl;
 }
 
@@ -48,21 +45,21 @@ void	identify(Base &p)
 	try
 	{
 		A &a = dynamic_cast<A&>(p);
-		(void)a;
+		static_cast<void>(a);
 		std::cout << "Real type of reference is: A" << std::endl;
 	}
 	catch (std::exception &e){}
 	try
 	{
 		B &b = dynamic_cast<B&>(p);
-		(void)b;
+		static_cast<void>(b);
 		std::cout << "Real type of reference is: B" << std::endl;
 	}
 	catch (std::exception &e){}	
 	try
 	{
 		C &c = dynamic_cast<C&>(p);
-		(void)c;
+		static_cast<void>(c);
 		std::cout << "Real type of reference is: C" << std::endl;
 	}
 	catch (std::exception &e){}
@@ -80,4 +77,5 @@ int main(void)
 		std::cout << std::endl;
 		delete(p);
 	}
+	return (0);
 }

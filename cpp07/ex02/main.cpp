@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:01:32 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/18 11:21:08 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/27 15:17:27 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,22 @@
 #include <iomanip>
 
 #define MAX_VAL 12
+
 int main(int, char**)
 {
-	std::cout << std::setw(15) << std::setfill('-') << '\n';
+	std::cout << "------------------" << std::endl;
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
+
+	std::cout << numbers << std::endl;
+	std::cout << "------------------" << std::endl;
+    
+	for (int i = 0; i < MAX_VAL; i++)
     {
-        const int value = rand();
+        const int value = rand() % 128;
         numbers[i] = value;
         mirror[i] = value;
-    }
-    //SCOPE
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
     }
 
     for (int i = 0; i < MAX_VAL; i++)
@@ -43,14 +43,24 @@ int main(int, char**)
             return 1;
         }
     }
-    try
-    {
-        numbers[-2] = 0;
+
+	{
+        Array<int> tmp = numbers;
+        Array<int> test(tmp);
+
+		std::cout << "numbers: " << numbers << std::endl;
+		std::cout << "tmp:     " << tmp << std::endl;
+		std::cout << "test:    " << test << std::endl;
+		std::cout << std::endl;
+
+		numbers[0] = 21;
+		tmp[0] = 42;
+		std::cout << "numbers: " << numbers << std::endl;
+		std::cout << "tmp:     " << tmp << std::endl;
+		std::cout << "test:    " << test << std::endl;	
+		std::cout << "------------------" << std::endl;
     }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+
     try
     {
         numbers[MAX_VAL] = 0;
@@ -59,24 +69,15 @@ int main(int, char**)
     {
         std::cerr << e.what() << '\n';
     }
+	std::cout << "------------------" << std::endl;
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        numbers[i] = rand();
-    }
-    delete [] mirror;//
-	std::cout << std::setw(15) << std::setfill('-') << '\n';
-	Array<int> a1(MAX_VAL);
 	for (int i = 0; i < MAX_VAL; i++)
-		a1[i] = i;
-	Array<int> a2(a1);
-	for (size_t i = 0; i < MAX_VAL; i++)
-		std::cout << "a1[" << i << "] = " << a1[i] << "; a2[" << i << "] = " << a2[i] << std::endl;
+		numbers[i] = rand() % 256;
+	std::cout << numbers << std::endl;
 	for (int i = 0; i < MAX_VAL; i++)
-		a1[i] = -i;
-	for (size_t i = 0; i < MAX_VAL; i++)
-		std::cout << "a1[" << i << "] = " << a1[i] << "; a2[" << i << "] = " << a2[i] << std::endl;
-	std::cout << std::setw(15) << std::setfill('-') << '\n';
-		
+		numbers[i] += 5;
+	std::cout << numbers << std::endl;
+
+    delete [] mirror;
     return 0;
 }
