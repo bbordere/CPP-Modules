@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 11:01:32 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/27 15:17:27 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:01:01 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@ int main(int, char**)
 {
 	std::cout << "------------------" << std::endl;
     Array<int> numbers(MAX_VAL);
+	Array<double> def;
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
 
-	std::cout << numbers << std::endl;
+	std::cout << "numbers: " << numbers << ", size = " << numbers.size() << std::endl;
+	std::cout << "def: " << def << ", size = " << def.size() << std::endl;
 	std::cout << "------------------" << std::endl;
-    
+ 
 	for (int i = 0; i < MAX_VAL; i++)
     {
         const int value = rand() % 128;
@@ -54,7 +56,8 @@ int main(int, char**)
 		std::cout << std::endl;
 
 		numbers[0] = 21;
-		tmp[0] = 42;
+		tmp[1] = 42;
+		test[2] = 38;
 		std::cout << "numbers: " << numbers << std::endl;
 		std::cout << "tmp:     " << tmp << std::endl;
 		std::cout << "test:    " << test << std::endl;	
@@ -64,6 +67,14 @@ int main(int, char**)
     try
     {
         numbers[MAX_VAL] = 0;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    try
+    {
+        numbers[50] = 0;
     }
     catch(const std::exception& e)
     {

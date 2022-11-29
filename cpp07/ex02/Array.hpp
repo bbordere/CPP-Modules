@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 10:40:27 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/27 15:16:27 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/29 14:08:40 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,28 +38,29 @@ class Array
 			this->_size = 0;
 		};
 		
-		Array(unsigned int size)
+		Array(unsigned int n)
 		{
-			this->array = new T[size]();
-			this->_size = size;
+			this->array = new T[n]();
+			this->_size = n;
 		};
 		
 		Array(Array<T> const &copy)
 		{
-			this->array = new T[copy.size()];
 			this->_size = copy.size();
+			this->array = new T[this->_size];
 			for (unsigned int i = 0; i < this->_size; i++)
 				this->array[i] = copy.array[i];
 		};
 
 		Array<T> &operator=(Array<T> const &assign)
 		{
-			delete [] this->array;
-			this->array = new T[assign.size()];
+			if (this->arrayExist())
+				delete [] this->array;
 			this->_size = assign.size();
+			this->array = new T[this->_size];
 			for (unsigned int i = 0; i < this->_size; i++)
 				this->array[i] = assign.array[i];
-			return (*this);			
+			return (*this);
 		};
 
 		T &operator[](unsigned int index)
@@ -83,7 +84,8 @@ class Array
 		
 		~Array()
 		{
-			delete []this->array;
+			if (this->arrayExist())
+				delete []this->array;
 		};
 
 		bool	arrayExist(void) const
@@ -96,7 +98,10 @@ template <typename T>
 std::ostream &operator<<(std::ostream &stream, Array<T> const &array)
 {
 	if (!array.arrayExist())
+	{
+		stream << "[]";
 		return (stream);
+	}
 	stream << "[";
 	for (unsigned int i = 0; i < array.size() - 1; i++)
 		stream << array[i] << ", ";
