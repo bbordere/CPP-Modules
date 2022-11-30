@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:20:00 by bbordere          #+#    #+#             */
-/*   Updated: 2022/07/08 16:20:43 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/11/30 20:20:36 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ Span::Span(Span const &copy)
 Span &Span::operator=(Span const &asssign)
 {
 	this->size = asssign.getSize();
-	this->span = std::vector<int>(asssign.span);
+	this->span.clear();
+	this->span.insert(this->span.begin(), asssign.span.begin(), asssign.span.end());
 	return (*this);
 }
 
@@ -45,7 +46,7 @@ Span::~Span()
 
 const char *Span::DistanceNotFoundException::what(void) const throw()
 {
-	return ("Distance can't be finded. Span must contains almost 2 elements !");
+	return ("Distance can't be found. Span must contain almost 2 elements!");
 }
 
 const char *Span::OutOfRangeException::what(void) const throw()
@@ -81,10 +82,10 @@ unsigned int Span::shortestSpan(void) const
 	{
 		std::vector<int> temp(this->span);
 		std::sort(temp.begin(), temp.end());
-		int res = 2147483647;
-		for (std::size_t i = 1; i < this->span.size() ; i++)
-			if (temp[i] - temp[i - 1] < res)
-				res = temp[i] - temp[i - 1];
+		int res = temp.at(1) - temp.at(0);
+		for (std::size_t i = 2; i < this->span.size() ; i++)
+			if (temp.at(i) - temp.at(i - 1) < res)
+				res = temp.at(i) - temp.at(i - 1);
 		return (static_cast<unsigned int>(res));
 	}
 }
