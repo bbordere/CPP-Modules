@@ -6,7 +6,7 @@
 /*   By: bbordere <bbordere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:20:00 by bbordere          #+#    #+#             */
-/*   Updated: 2022/11/30 20:20:36 by bbordere         ###   ########.fr       */
+/*   Updated: 2022/12/01 22:12:43 by bbordere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,11 @@ unsigned int Span::shortestSpan(void) const
 		std::vector<int> temp(this->span);
 		std::sort(temp.begin(), temp.end());
 		int res = temp.at(1) - temp.at(0);
-		for (std::size_t i = 2; i < this->span.size() ; i++)
-			if (temp.at(i) - temp.at(i - 1) < res)
-				res = temp.at(i) - temp.at(i - 1);
+		for (std::vector<int>::iterator it = temp.begin() + 1; it != temp.end(); it++) 
+		{
+			if(*it - *(it - 1) < res) 
+				res = *it - *(it - 1);
+		}
 		return (static_cast<unsigned int>(res));
 	}
 }
